@@ -17,10 +17,80 @@
             <p class="subtitle">Article Information Helper</p>
         </header>
 
-        <div id="chat-container"></div>
     </div>
 
     <script src="env-config.js"></script>
-    <script src="script.js"></script>
+    <script type="module">
+        import Chatbot from "https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js"
+
+        const apiHost = window.__ENV__?.FLOWISE_API_URL || "http://localhost:3000";
+        const chatflowid = window.__ENV__?.CHATFLOW_ID || "YOUR_CHATFLOW_ID";
+
+        Chatbot.init({
+            chatflowid: chatflowid,
+            apiHost: apiHost,
+            theme: {
+                button: {
+                    backgroundColor: "#000000",
+                    right: 20,
+                    bottom: 20,
+                    size: 48,
+                    dragAndDrop: true,
+                    iconColor: "white",
+                    autoWindowOpen: {
+                        autoOpen: true,
+                        openDelay: 2,
+                        autoOpenOnMobile: false
+                    }
+                },
+                tooltip: {
+                    showTooltip: true,
+                    tooltipMessage: "Hi There! Ask me about articles",
+                    tooltipBackgroundColor: "black",
+                    tooltipTextColor: "white",
+                    tooltipFontSize: 14
+                },
+                chatWindow: {
+                    showTitle: true,
+                    showAgentMessages: true,
+                    title: "ReelNews Assistant",
+                    welcomeMessage: "Hello! I can answer questions about articles. Ask me anything!",
+                    errorMessage: "Something went wrong. Please try again.",
+                    backgroundColor: "#ffffff",
+                    height: 700,
+                    width: 400,
+                    fontSize: 16,
+                    clearChatOnReload: false,
+                    renderHTML: true,
+                    botMessage: {
+                        backgroundColor: "#f0f0f0",
+                        textColor: "#000000",
+                        showAvatar: true,
+                    },
+                    userMessage: {
+                        backgroundColor: "#000000",
+                        textColor: "#ffffff",
+                        showAvatar: true,
+                    },
+                    textInput: {
+                        placeholder: "Type your question...",
+                        backgroundColor: "#ffffff",
+                        textColor: "#000000",
+                        sendButtonColor: "#000000",
+                        autoFocus: true,
+                    },
+                    feedback: {
+                        color: "#000000"
+                    },
+                    footer: {
+                        textColor: "#999999",
+                        text: "Powered by",
+                        company: "ReelNews",
+                        companyLink: ""
+                    }
+                }
+            }
+        })
+    </script>
 </body>
 </html>
