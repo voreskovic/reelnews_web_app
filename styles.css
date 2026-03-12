@@ -48,6 +48,45 @@ header h1 {
     font-size: 1rem;
 }
 
+/* ── Hero ── */
+.hero {
+    text-align: center;
+}
+
+.hero-text {
+    color: #374151;
+    font-size: 1rem;
+    line-height: 1.6;
+    max-width: 480px;
+    margin: 0 auto;
+}
+
+.features {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.85rem;
+    color: #6b7280;
+}
+
+.feature-icon {
+    font-size: 1rem;
+}
+
+.hero-hint {
+    margin-top: 2rem;
+    color: #9ca3af;
+    font-size: 0.85rem;
+}
+
 /* ── Chat Container ── */
 #chat-container {
     min-height: 400px;

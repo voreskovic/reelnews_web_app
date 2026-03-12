@@ -14,9 +14,27 @@
         <header>
             <img src="logos/ReelNews logo.png" alt="ReelNews" class="logo">
             <h1>ReelNews AI Assistant</h1>
-            <p class="subtitle">Article Information Helper</p>
+            <p class="subtitle">Your AI-powered news analyst — ask anything about your articles</p>
         </header>
 
+        <main class="hero">
+            <p class="hero-text">Get instant insights from your article clusters. Ask about key topics, summaries, sentiment, or connections between stories.</p>
+            <div class="features">
+                <div class="feature">
+                    <span class="feature-icon">&#9881;</span>
+                    <span>Deep article analysis</span>
+                </div>
+                <div class="feature">
+                    <span class="feature-icon">&#9733;</span>
+                    <span>Smart summarization</span>
+                </div>
+                <div class="feature">
+                    <span class="feature-icon">&#8644;</span>
+                    <span>Cross-article connections</span>
+                </div>
+            </div>
+            <p class="hero-hint">Click the chat bubble to get started &rarr;</p>
+        </main>
     </div>
 
     <script src="env-config.js"></script>
@@ -66,11 +84,13 @@
                         backgroundColor: "#f0f0f0",
                         textColor: "#000000",
                         showAvatar: true,
+                        avatarSrc: "logos/ReelNews logo.png",
                     },
                     userMessage: {
                         backgroundColor: "#000000",
                         textColor: "#ffffff",
                         showAvatar: true,
+                        avatarSrc: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30'%3E%3Ccircle cx='15' cy='15' r='15' fill='%23000'/%3E%3Ctext x='15' y='20' text-anchor='middle' fill='white' font-family='Inter,sans-serif' font-size='16' font-weight='600'%3EU%3C/text%3E%3C/svg%3E",
                     },
                     textInput: {
                         placeholder: "Type your question...",
