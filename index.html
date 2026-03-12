@@ -17,36 +17,10 @@
             <p class="subtitle">Article Information Helper</p>
         </header>
 
-        <div class="config-box">
-            <h2>Configure Chat Session</h2>
-            <div class="input-group">
-                <label for="collection-name-input">Collection Name</label>
-                <input
-                    type="text"
-                    id="collection-name-input"
-                    placeholder="e.g. news_articles"
-                    autocomplete="off"
-                >
-            </div>
-            <div class="input-group">
-                <label for="point-id-input">Point ID</label>
-                <input
-                    type="text"
-                    id="point-id-input"
-                    placeholder="e.g. 123e4567-e89b-12d3-a456-426614174000"
-                    autocomplete="off"
-                >
-            </div>
-            <button id="activate-btn" type="button">Activate ChatBot</button>
-            <div class="status-badge" id="status-badge">
-                <span class="status-dot" id="status-dot"></span>
-                <span id="status-text">Disabled</span>
-            </div>
-        </div>
-
         <div id="chat-container"></div>
     </div>
 
+    <script src="env-config.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

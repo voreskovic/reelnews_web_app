@@ -2,7 +2,7 @@ services:
   - type: web
     name: reelnews-chatbot
     env: static
-    buildCommand: echo "No build required for static site"
+    buildCommand: "echo \"window.__ENV__ = { FLOWISE_API_URL: '${FLOWISE_API_URL}', CHATFLOW_ID: '${CHATFLOW_ID}' };\" > env-config.js"
     staticPublishPath: .
     routes:
       - type: rewrite
